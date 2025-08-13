@@ -179,6 +179,3 @@ Log in with that account in the app; admin-only controls appear automatically.
 - 401 after some time
 
   - Refresh token flow is built-in; if it fails, log out and log in again
-
-- mysqlclient install issues (Windows)
-  - Install MySQL and its C headers; or use wheels from Christoph Gohlke; or switch to SQLite for local dev
