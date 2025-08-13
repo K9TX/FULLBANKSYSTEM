@@ -1,0 +1,168 @@
+/* Reset and box sizing to avoid overflow */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 4vw, 3.2em);
+  line-height: 1.1;
+}
+
+h2 { font-size: clamp(1.3rem, 3.4vw, 2rem); }
+h3 { font-size: clamp(1.1rem, 3vw, 1.6rem); }
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Global page background to prevent white gaps */
+html, body, #root {
+  background-color: #0a1a3a; /* fallback dark */
+}
+
+/* Page scrolling behavior */
+html, body, #root {
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scroll causing right gap */
+}
+
+/* Media-safe images and SVGs */
+img, svg { max-width: 100%; height: auto; }
+
+/* Prevent long words from breaking layout on mobile */
+.MuiTypography-root, p, span { 
+  overflow-wrap: anywhere; 
+  word-break: break-word; 
+}
+
+/* Avoid iOS zoom on inputs */
+input, select, textarea { font-size: 16px; }
+
+/* Dark themed global scrollbar */
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar, body::-webkit-scrollbar, #root::-webkit-scrollbar { width: 10px; }
+html::-webkit-scrollbar-track, body::-webkit-scrollbar-track, #root::-webkit-scrollbar-track { background: #0a1a3a; }
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, #root::-webkit-scrollbar-thumb {
+  background: rgba(45,127,249,0.35);
+  border-radius: 8px;
+  border: 2px solid #0a1a3a;
+}
+html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover, #root::-webkit-scrollbar-thumb:hover { background: rgba(45,127,249,0.55); }
+
+/* Firefox */
+html, body { scrollbar-color: rgba(45,127,249,0.5) #0a1a3a; scrollbar-width: thin; }
+
+/* Only hide scrollbars for explicit no-scroll containers */
+.no-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+.no-scroll::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari, Opera */
+}
+
+/* Scroll containers show scrollbars normally */
+.scroll-container {
+  overflow-y: auto; /* Enable vertical scrolling */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none;    /* Hide scrollbar for Firefox */
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;            /* Hide scrollbar for Chrome, Safari, Opera */
+}
+
+/* Centering helper */
+.centered-container { max-width: 1120px; margin-left: auto; margin-right: auto; padding-left: 16px; padding-right: 16px; }
+
+@media (max-width: 600px) {
+  .centered-container { padding-left: 12px; padding-right: 12px; }
+  .MuiTypography-h4 { font-size: 1.4rem !important; }
+  .MuiTypography-h5 { font-size: 1.2rem !important; }
+  .MuiButton-root { padding: 0.6em 1em !important; }
+}
+
+/* Global MUI input styling for dark forms */
+.MuiTextField-root .MuiInputBase-input,
+.MuiTextField-root .MuiInputBase-input.MuiInputBase-inputAdornedEnd,
+.MuiInputBase-input,
+.MuiInputBase-inputMultiline,
+.MuiOutlinedInput-input {
+  color: #ffffff !important; /* typed text is white */
+}
+
+/* Placeholder color */
+.MuiTextField-root .MuiInputBase-input::placeholder,
+.MuiOutlinedInput-input::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* Label colors */
+.MuiInputLabel-root { color: #bcd3ff !important; }
+.MuiInputLabel-root.Mui-focused { color: #eaf2ff !important; }
+
+/* Helper text */
+.MuiFormHelperText-root { color: #9fb4ff !important; }
+
+/* Outline/border colors */
+.MuiOutlinedInput-notchedOutline { border-color: rgba(45,127,249,0.35) !important; }
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline { border-color: #2d7ff9 !important; }
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: #2d7ff9 !important; }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
