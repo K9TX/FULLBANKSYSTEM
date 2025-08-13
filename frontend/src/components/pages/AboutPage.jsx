@@ -99,7 +99,7 @@ const AboutPage = () => {
               <Typography variant="h6" sx={{ fontWeight: 800 }}>Connect with us</Typography>
               <Typography sx={{ color: "#9fb4ff" }}>Follow updates and contribute.</Typography>
               <Stack direction="row" spacing={1}>
-                <IconButton component="a" href="https://github.com/K9TX/CompleteBankSystem" target="_blank" rel="noopener" aria-label="GitHub" sx={{ color: "#eaf2ff" }}>
+                <IconButton component="a" href="https://github.com/K9TX/fullBankSystem" target="_blank" rel="noopener" aria-label="GitHub" sx={{ color: "#eaf2ff" }}>
                   <GitHubIcon />
                 </IconButton>
                 <IconButton component="a" href="https://x.com/K9TXS" target="_blank" rel="noopener" aria-label="Twitter" sx={{ color: "#eaf2ff" }}>
@@ -135,3 +135,4 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
