@@ -75,8 +75,9 @@ python -m venv venv
 2. Install dependencies (if requirements.txt is missing on your machine, install these manually)
 
 ```bash
-pip install django djangorestframework djangorestframework-simplejwt django-allauth dj-rest-auth \
-    channels channels-redis python-decouple mysqlclient django-cors-headers
+
+pip install django djangorestframework djangorestframework-simplejwt django-oauth-toolkit django-allauth dj-rest-auth[with_social] mysqlclient python-decouple Pillow django-cors-headers channels channels-redis
+
 ```
 
 3. Configure database
