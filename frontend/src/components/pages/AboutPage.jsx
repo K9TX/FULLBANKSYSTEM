@@ -108,7 +108,7 @@ const AboutPage = () => {
                 <IconButton component="a" href="https://in.linkedin.com/in/k9tx" target="_blank" rel="noopener" aria-label="LinkedIn" sx={{ color: "#eaf2ff" }}>
                   <LinkedInIcon />
                 </IconButton>
-                <IconButton component="a" href="mailto:no-reply@example.com" aria-label="Email" sx={{ color: "#eaf2ff" }}>
+                <IconButton component="a" href="mailto:k9txss@gmail.com" aria-label="Email" sx={{ color: "#eaf2ff" }}>
                   <EmailIcon />
                 </IconButton>
                 <IconButton component="a" href="/" aria-label="Website" sx={{ color: "#eaf2ff" }}>
@@ -119,7 +119,7 @@ const AboutPage = () => {
                 variant="contained"
                 color="primary"
                 component="a"
-                href="https://github.com/K9TX/CompleteBankSystem"
+                href="https://github.com/K9TX/fullBankSystem"
                 target="_blank"
                 rel="noopener"
                 sx={{ mt: 1, fontWeight: 800, boxShadow: "0 0 16px rgba(45,127,249,0.45)" }}
@@ -135,4 +135,5 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
 
