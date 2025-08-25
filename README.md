@@ -37,19 +37,6 @@ Full-stack banking app built with Django REST Framework and React. Includes secu
 - Backend: (core lang - python)Django, Django REST Framework, SimpleJWT, dj-rest-auth, allauth, Channels, MySQL
 - Frontend:(core lang - javascript) React, Vite, MUI, Axios, React Router
 
-## Project Structure
-
-```
-backend/
-  core/            # Django project (settings, urls)
-  accounts/        # App: models, serializers, views, urls
-  media/           # Uploaded images (blogs, profiles)
-frontend/front/
-  src/             # React app
-    components/    # Pages and UI
-    services/      # API client
-```
-
 ## Prerequisites
 
 - Python 3.10+
@@ -103,26 +90,7 @@ python manage.py createsuperuser  # admin login for /admin and approvals
 python manage.py runserver
 ```
 
-Optional: Create backend/.env from this template if you prefer env files
 
-```
-DJANGO_SECRET_KEY=dev-insecure-key
-DJANGO_DEBUG=true
-DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
-
-DB_ENGINE=django.db.backends.mysql
-DB_NAME=bankx
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_HOST=localhost
-DB_PORT=3306
-
-EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
-DEFAULT_FROM_EMAIL=K9TX Bank <no-reply@example.com>
-
-REDIS_HOST=127.0.0.1
-REDIS_PORT=6379
-```
 
 ## Frontend Setup (React + Vite)
 
@@ -151,15 +119,6 @@ If npm asks to install dependencies, run:
 npm install
 ```
 
-## Using the App
-
-- Sign up, log in, and explore sidebar pages (Home, Balance, Deposit, Transfer, Transactions, Blogs, Users, Loans, Profile, About)
-- Loans: users apply; admins approve/reject on the Loans page
-- Blogs: create posts with optional images; admins can delete posts
-- Users: copy any account number for transfers
-
-## Admin Tasks
-
 Create an admin:
 
 ```bash
@@ -168,15 +127,3 @@ cd backend
 python manage.py createsuperuser
 ```
 
-Log in with that account in the app; admin-only controls appear automatically.
-
-## Troubleshooting
-
-- Blog images not showing
-
-  - Ensure `MEDIA_URL` starts with `/` and Vite proxy includes `/media`
-  - Restart both dev servers after config changes
-
-- 401 after some time
-
-  - Refresh token flow is built-in; if it fails, log out and log in again
